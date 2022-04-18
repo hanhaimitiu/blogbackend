@@ -94,7 +94,8 @@ public class ObArticleServiceImpl extends ServiceImpl<ObArticleMapper, ObArticle
         obArticle.setCreatetime(String.valueOf(System.currentTimeMillis()));
         obArticle.setUpdatetime(String.valueOf(System.currentTimeMillis()));
         save(obArticle);
-        return Result.success("创建成功");
+        System.out.println(obArticle);
+        return Result.success(obArticle.getId());
     }
 }
 

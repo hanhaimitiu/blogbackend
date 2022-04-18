@@ -2,7 +2,9 @@ package com.success.blogapi.service;
 
 import com.success.blogapi.dao.Tags;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.success.blogapi.vo.Result;
 import com.success.blogapi.vo.TagsVo;
+import com.success.blogapi.vo.param.ArticleTagsParam;
 
 import java.util.List;
 
@@ -15,4 +17,5 @@ public interface TagsService extends IService<Tags> {
     //用于将tags扩展出name，并返回ListTagsVo,一个ListTagsVo对应一个文章
     List<TagsVo> getallTags();
 
+    Result addTagsArticle(ArticleTagsParam param);
 }

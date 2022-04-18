@@ -2,6 +2,8 @@ package com.success.blogapi.service;
 
 import com.success.blogapi.dao.ObTag;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.success.blogapi.vo.Result;
+import com.success.blogapi.vo.param.TagParam;
 
 import java.util.List;
 
@@ -12,5 +14,7 @@ import java.util.List;
 */
 public interface ObTagService extends IService<ObTag> {
 
-    List<ObTag> getTags();
+    Result getTags();
+
+    Result createTag(TagParam param);
 }

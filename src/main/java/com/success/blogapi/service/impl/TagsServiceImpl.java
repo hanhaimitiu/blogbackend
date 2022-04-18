@@ -4,7 +4,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.success.blogapi.dao.Tags;
 import com.success.blogapi.service.TagsService;
 import com.success.blogapi.mapper.TagsMapper;
+import com.success.blogapi.vo.Result;
 import com.success.blogapi.vo.TagsVo;
+import com.success.blogapi.vo.param.ArticleTagsParam;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,6 +25,19 @@ public class TagsServiceImpl extends ServiceImpl<TagsMapper, Tags>
         return null;
 
 
+    }
+
+    @Override
+    public Result addTagsArticle(ArticleTagsParam param) {
+        List<Integer> tag = param.getTag();
+        for (Integer tagid:tag){
+            Tags tags = new Tags();
+            tags.setArticleid(param.getArticleid());
+            tags.setTagid(tagid);
+            save(tags);
+        }
+
+        return Result.success("成功保存");
     }
 }
 
