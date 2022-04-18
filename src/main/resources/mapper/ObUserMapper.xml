@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.success.blogapi.mapper.ObUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.success.blogapi.dao.ObUser">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="account" column="account" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="createtime" column="createtime" jdbcType="VARCHAR"/>
+            <result property="updatetime" column="updatetime" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,account,password,
+        phone,email,createtime,
+        updatetime
+    </sql>
+</mapper>
