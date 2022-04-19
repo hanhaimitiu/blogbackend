@@ -18,8 +18,9 @@ public enum ErrorCode {
 
     SESSION_TIME_OUT(90001,"会话超时"),
 
-    NO_LOGIN(90002,"未登录"),;
+    NO_LOGIN(90002,"未登录"),
 
+    DATA_EXIST(90003,"数据不得重复");
 
 
     private int code;

@@ -48,7 +48,7 @@ public class ObArticleServiceImpl extends ServiceImpl<ObArticleMapper, ObArticle
             articleVo.setUpdatetime(DateUtils.format(articleVo.getUpdatetime()));
             articleVos.add(articleVo);
         }
-
+        System.out.println("9999");
         return Result.success(articleVos);
     }
 

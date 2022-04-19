@@ -25,7 +25,9 @@ public class ArticleController {
     @PostMapping()
     public Result createArticle(@RequestBody ArticleParam param){
         return obArticleService.createArticle(param);
+
     }
+
 
     @PutMapping("{id}")
     public Result editArticle(@RequestBody ArticleParam param){

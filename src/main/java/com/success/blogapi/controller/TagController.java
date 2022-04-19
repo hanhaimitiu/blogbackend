@@ -18,19 +18,21 @@ public class TagController {
 
    @Autowired
    private TagsService tagsService;
+   //获取所有tags
     @GetMapping
     public Result getTags(){
         return obTagService.getTags();
     }
 
-
+    //创建一个tag
     @PostMapping
     public Result createTag(@RequestBody TagParam param){
         return obTagService.createTag(param);
     }
-
+    //给文章增加tags
     @PostMapping("article")
     public Result addTagsArticle(@RequestBody ArticleTagsParam param){
+        System.out.println(param);
         return tagsService.addTagsArticle(param);
     }
 }

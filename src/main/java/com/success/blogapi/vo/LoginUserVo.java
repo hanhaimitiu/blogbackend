@@ -14,5 +14,6 @@ public class LoginUserVo {
 
     private String lastlogin;
 
+    private String email;
 
 }

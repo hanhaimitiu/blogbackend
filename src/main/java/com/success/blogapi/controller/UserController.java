@@ -23,6 +23,7 @@ public class UserController {
     }
     @GetMapping("currentuser")
     public Result currentUser(@RequestHeader("Authorization") String token){
+
         return obUserService.findUserByToken(token);
     }
     @PostMapping("register")

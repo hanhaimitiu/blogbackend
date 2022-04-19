@@ -55,10 +55,12 @@ public class ObUserServiceImpl extends ServiceImpl<ObUserMapper, ObUser>
         loginUserVo.setAccount(obUser.getAccount());
         loginUserVo.setId(obUser.getId());
         loginUserVo.setLastlogin(DateUtils.format(obUser.getUpdatetime()));
+        loginUserVo.setEmail(obUser.getEmail());
+        System.out.println(loginUserVo);
         return Result.success(loginUserVo);
     }
 
-    private ObUser checkToken(String token) {
+    public ObUser checkToken(String token) {
         if (StringUtils.isBlank(token)) {
             return null;
         }

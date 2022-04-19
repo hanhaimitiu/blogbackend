@@ -29,6 +29,7 @@ public class TagsServiceImpl extends ServiceImpl<TagsMapper, Tags>
 
     @Override
     public Result addTagsArticle(ArticleTagsParam param) {
+        System.out.println(param);
         List<Integer> tag = param.getTag();
         for (Integer tagid:tag){
             Tags tags = new Tags();

@@ -23,7 +23,9 @@ public class ObTagServiceImpl extends ServiceImpl<ObTagMapper, ObTag>
 
     @Override
     public Result getTags() {
+        System.out.println("ssssss");
         List<ObTag> list = list();
+        System.out.println(list);
         List<TagsVo> tagsVos=new ArrayList<>();
         for (ObTag vo:list){
            tagsVos.add(copy(vo));

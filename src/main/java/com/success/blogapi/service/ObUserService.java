@@ -19,4 +19,5 @@ public interface ObUserService extends IService<ObUser> {
     Result logout(String token);
 
     Result register(LoginParam loginParam);
+    ObUser checkToken(String token);
 }
